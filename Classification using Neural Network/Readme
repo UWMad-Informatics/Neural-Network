@@ -1,1 +1,31 @@
-Classification done using a one hidden layer Neural Network   
+Problem Formulation:	Creating a one hidden layer Neural Network to classify the given data into two classes. 
+
+Datasets:
+•	Training Set:  IVAR 
+•	Test Set:    LWR
+•	Note: The dataparser file for this project is slightly modified and used for better debugging purposes.
+
+
+
+
+1)  In all the codes the following four variables are used to create the confusion matrix:
+	a) pred_1_actual_1= # of values the models predicts as 1 and they are actually 1 in the test case.
+	b)pred_1_not_1=# of values the models predicts as 1 but are not actually 1 in the test case.
+	c)pred_0_actual_0= # of values the models predicts as 0 and they are actually 0 in the test case.
+	d)pred_0_not_0=# of values the model predicts as 0 but are not actually 0
+2) In all the codes the following functions and classes are common ( A short description of what they do is also provided)
+	a.) run_training: Creates the tensorflow graph, create the placeholders and define the architecture of the neural network. You can define the activation for every layer of the neural network. Its also here that we can set the bias and also decide the initialization process for all the variables
+	b) loss_fn: this simply calculates the loss mainly using Mean Squared Error. It can also be the cross entropy loss function, however mean squared is the more general one
+	c) placeholder_inputs , do_eval , and fill_feed_dict  are  some basic helper functions
+
+
+
+3) The foloowing codes do the following specific tasks:
+	a)test.py : Mainly trains and tests using just the cross validation
+	b) test_1.py:  Creating the Confusion Matrix by training and testing over entire training set
+	c) test_2.py: Training on IVAR and testing on LWR
+	d) oversampling training on complete training.py  &  oversampling training.py: Codes with Oversampling
+	e) svm.py: Classification done using SVM
+
+
+
